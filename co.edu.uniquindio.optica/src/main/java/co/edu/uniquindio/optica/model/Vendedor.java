@@ -1,4 +1,5 @@
 package co.edu.uniquindio.optica.model;
+import co.edu.uniquindio.optica.enums.MaterialMontura;
 
 public class Vendedor
 {
@@ -37,5 +38,28 @@ public class Vendedor
 
     public void setSalarioBasico(double salarioBasico) {
         this.salarioBasico = salarioBasico;
+    }
+
+    public double costoMontura(MaterialMontura tipoMontura){
+        double precioMontura = 0;
+        switch (tipoMontura){
+            case TITANIO:
+                precioMontura = 200000;
+                break;
+            case ACERO_INOXIDABLE:
+                precioMontura = 50000;
+                break;
+            case ACETATO:
+                precioMontura = 12500;
+                break;
+            case ALUMINIO:
+                precioMontura = 100000;
+                break;
+            case PLASTICO:
+                precioMontura = 25000;
+            default:
+                break;
+        }
+        return precioMontura;
     }
 }
