@@ -6,7 +6,7 @@ import co.edu.uniquindio.optica.enums.TipoFiltro;
 public class Cliente
 {
     private String nombreCompleto;
-    private int numeroContacto;
+    private long numeroContacto;
     private int edad;
     private int numeroId;
     private double grado;
@@ -14,9 +14,9 @@ public class Cliente
     private MaterialMontura materialMontura;
     private TipoFiltro tipoFiltro;
 
-    public Cliente(){}
+    //public Cliente(){}
 
-    public Cliente(String nombreCompleto, int numeroContacto, int edad, int numeroId, double grado,
+    public Cliente(String nombreCompleto, long numeroContacto, int edad, int numeroId, double grado,
                    Diagnostico diagnostico, MaterialMontura materialMontura, TipoFiltro tipoFiltro)
     {
         this.nombreCompleto = nombreCompleto;
@@ -37,11 +37,11 @@ public class Cliente
         this.nombreCompleto = nombreCompleto;
     }
 
-    public int getNumeroContacto() {
+    public long getNumeroContacto() {
         return numeroContacto;
     }
 
-    public void setNumeroContacto(int numeroContacto) {
+    public void setNumeroContacto(long numeroContacto) {
         this.numeroContacto = numeroContacto;
     }
 
