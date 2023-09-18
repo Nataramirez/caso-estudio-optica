@@ -8,7 +8,7 @@ public class Vendedor
 
     public Vendedor() {}
 
-    public Vendedor(String nombreCompleto, int numeroId, double salarioBasico, double comisiones)
+    public Vendedor(String nombreCompleto, int numeroId, double salarioBasico)
     {
         this.nombreCompleto = nombreCompleto;
         this.numeroId = numeroId;
