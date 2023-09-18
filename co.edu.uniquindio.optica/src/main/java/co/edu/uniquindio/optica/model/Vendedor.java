@@ -1,5 +1,6 @@
 package co.edu.uniquindio.optica.model;
 import co.edu.uniquindio.optica.enums.MaterialMontura;
+import co.edu.uniquindio.optica.enums.TipoFiltro;
 
 public class Vendedor
 {
@@ -62,4 +63,53 @@ public class Vendedor
         }
         return precioMontura;
     }
+    public double costoFiltro(TipoFiltro tipoFiltro){
+        double precioFiltro = 0;
+        switch (tipoFiltro){
+            case ANTIREFLEJO:
+                precioFiltro = 20000;
+                break;
+            case UV:
+                precioFiltro = 40000;
+                break;
+            case HIDROFOBICO:
+                precioFiltro = 80000;
+                break;
+            case COLORACION:
+                precioFiltro = 160000;
+                break;
+            case ANTI_RAYAS:
+                precioFiltro = 200000;
+                break;
+            case FOTOCROMATICO:
+                precioFiltro = 300000;
+                break;
+            case POLARIZADO:
+                precioFiltro = 350000;
+                break;
+            case ESPEJADO:
+                precioFiltro = 450000;
+                break;
+            default:
+                break;
+        }
+        return precioFiltro;
+    }
+    public double costoTotalVenta(Cliente cliente){
+        double costoFiltroCliente = costoFiltro(cliente.getTipoFiltro());
+        double costoMonturaCliente = costoMontura(cliente.getMaterialMontura());
+        double costoDiagnosticoCliente = cliente.getDiagnostico().getPrecio();
+        double costoGradoCliente = cliente.getGrado().getPrecio();
+        return costoFiltroCliente + costoMonturaCliente + costoDiagnosticoCliente + costoGradoCliente;
+    }
+    public double comisionVentas(double costoVenta1, double costoVenta2, double costoVenta3, double costoVenta4, double costoVenta5){
+        double comision = (costoVenta1 + costoVenta2 + costoVenta3 + costoVenta4 + costoVenta5)*0.1;
+        return comision;
+    }
+    public double salarioTotal(double salarioBasico, double comisionVentas){
+        double salarioTotal = salarioBasico + comisionVentas;
+        return  salarioTotal;
+    }
+
+
 }

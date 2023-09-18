@@ -1,5 +1,6 @@
 package co.edu.uniquindio.optica.model;
 import co.edu.uniquindio.optica.enums.Diagnostico;
+import co.edu.uniquindio.optica.enums.Grado;
 import co.edu.uniquindio.optica.enums.MaterialMontura;
 import co.edu.uniquindio.optica.enums.TipoFiltro;
 
@@ -9,14 +10,14 @@ public class Cliente
     private long numeroContacto;
     private int edad;
     private int numeroId;
-    private double grado;
+    private Grado grado;
     private Diagnostico diagnostico;
     private MaterialMontura materialMontura;
     private TipoFiltro tipoFiltro;
 
     //public Cliente(){}
 
-    public Cliente(String nombreCompleto, long numeroContacto, int edad, int numeroId, double grado,
+    public Cliente(String nombreCompleto, long numeroContacto, int edad, int numeroId, Grado grado,
                    Diagnostico diagnostico, MaterialMontura materialMontura, TipoFiltro tipoFiltro)
     {
         this.nombreCompleto = nombreCompleto;
@@ -61,11 +62,11 @@ public class Cliente
         this.numeroId = numeroId;
     }
 
-    public double getGrado() {
+    public Grado getGrado() {
         return grado;
     }
 
-    public void setGrado(double grado) {
+    public void setGrado(Grado grado) {
         this.grado = grado;
     }
 
