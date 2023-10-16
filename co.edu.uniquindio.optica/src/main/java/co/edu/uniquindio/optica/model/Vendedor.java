@@ -105,6 +105,7 @@ public class Vendedor
         }
         return precioFiltro;
     }
+    /*
     public double costoTotalVenta(Cliente cliente){
         double costoFiltroCliente = costoFiltro(cliente.getTipoFiltro());
         double costoMonturaCliente = costoMontura(cliente.getMaterialMontura());
@@ -112,6 +113,8 @@ public class Vendedor
         double costoGradoCliente = cliente.getGrado().getPrecio();
         return costoFiltroCliente + costoMonturaCliente + costoDiagnosticoCliente + costoGradoCliente;
     }
+
+     */
     public double comisionVentas(double costoVenta1, double costoVenta2, double costoVenta3, double costoVenta4, double costoVenta5){
         double comision = (costoVenta1 + costoVenta2 + costoVenta3 + costoVenta4 + costoVenta5)*0.1;
         return comision;
