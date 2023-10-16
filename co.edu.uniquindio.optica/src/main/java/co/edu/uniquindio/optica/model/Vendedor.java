@@ -8,6 +8,8 @@ public class Vendedor
     private int numeroId;
     private double salarioBasico;
 
+    Optica ownedByOptica;
+
     public Vendedor() {}
 
     public Vendedor(String nombreCompleto, int numeroId, double salarioBasico)
@@ -39,6 +41,14 @@ public class Vendedor
 
     public void setSalarioBasico(double salarioBasico) {
         this.salarioBasico = salarioBasico;
+    }
+
+    public Optica getOwnedByOptica() {
+        return ownedByOptica;
+    }
+
+    public void setOwnedByOptica(Optica ownedByOptica) {
+        this.ownedByOptica = ownedByOptica;
     }
 
     public double costoMontura(MaterialMontura tipoMontura){
@@ -111,5 +121,13 @@ public class Vendedor
         return  salarioTotal;
     }
 
+    @Override
+    public String toString() {
+        return "Vendedor{" +
+                "nombreCompleto='" + nombreCompleto + '\'' +
+                ", numeroId='" + numeroId + '\'' +
+                ", salarioBasico='" + salarioBasico + '\'' +
+                '}';
+    }
 
 }
