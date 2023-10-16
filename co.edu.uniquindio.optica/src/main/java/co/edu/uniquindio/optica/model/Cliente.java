@@ -4,30 +4,22 @@ import co.edu.uniquindio.optica.enums.Grado;
 import co.edu.uniquindio.optica.enums.MaterialMontura;
 import co.edu.uniquindio.optica.enums.TipoFiltro;
 
-public class Cliente
-{
+public class Cliente {
     private String nombreCompleto;
     private long numeroContacto;
     private int edad;
     private int numeroId;
-    private Grado grado;
-    private Diagnostico diagnostico;
-    private MaterialMontura materialMontura;
-    private TipoFiltro tipoFiltro;
+    private String correo;
 
-    //public Cliente(){}
+    public Cliente() {
+    }
 
-    public Cliente(String nombreCompleto, long numeroContacto, int edad, int numeroId, Grado grado,
-                   Diagnostico diagnostico, MaterialMontura materialMontura, TipoFiltro tipoFiltro)
-    {
+    public Cliente(String nombreCompleto, long numeroContacto, int edad, int numeroId, String correo) {
         this.nombreCompleto = nombreCompleto;
         this.numeroContacto = numeroContacto;
         this.edad = edad;
         this.numeroId = numeroId;
-        this.grado = grado;
-        this.diagnostico = diagnostico;
-        this.materialMontura = materialMontura;
-        this.tipoFiltro = tipoFiltro;
+        this.correo = correo;
     }
 
     public String getNombreCompleto() {
@@ -62,35 +54,24 @@ public class Cliente
         this.numeroId = numeroId;
     }
 
-    public Grado getGrado() {
-        return grado;
+    public String getCorreo() {
+        return correo;
     }
 
-    public void setGrado(Grado grado) {
-        this.grado = grado;
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 
-    public Diagnostico getDiagnostico() {
-        return diagnostico;
-    }
-
-    public void setDiagnostico(Diagnostico diagnostico) {
-        this.diagnostico = diagnostico;
-    }
-
-    public MaterialMontura getMaterialMontura() {
-        return materialMontura;
-    }
-
-    public void setMaterialMontura(MaterialMontura materialMontura) {
-        this.materialMontura = materialMontura;
-    }
-
-    public TipoFiltro getTipoFiltro() {
-        return tipoFiltro;
-    }
-
-    public void setTipoFiltro(TipoFiltro tipoFiltro) {
-        this.tipoFiltro = tipoFiltro;
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "nombreCompleto='" + nombreCompleto + '\'' +
+                ", numeroContacto=" + numeroContacto +
+                ", edad=" + edad +
+                ", numeroId=" + numeroId +
+                ", correo='" + correo + '\'' +
+                '}';
     }
 }
+
+
