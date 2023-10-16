@@ -25,10 +25,10 @@ public class Main
                 32,1138113441,Grado.GRADO_450,Diagnostico.MIOPIA,MaterialMontura.ALUMINIO,TipoFiltro.ANTIREFLEJO);
         Cliente cliente5 = new Cliente("Martín Herrera",1230481593,
                 14,1111507810,Grado.GRADO_325,Diagnostico.ASTIGMATISMO,MaterialMontura.ALUMINIO,TipoFiltro.FOTOCROMATICO);
-        crearVendedor("Nicolás Upegui", 1098, 1200000, new Optica());
-        crearVendedor("Jerónimo Osorio", 1099, 1200000, new Optica());
-        crearVendedor("Augusto Álvarez", 1001, 1200000, new Optica());
-        crearVendedor("Camilo Marulanda", 1002, 1200000, new Optica());
+        crearVendedor("Nicolás Upegui", 1098, 1200000, optica);
+        crearVendedor("Jerónimo Osorio", 1099, 1200000, optica);
+        crearVendedor("Augusto Álvarez", 1001, 1200000, optica);
+        crearVendedor("Camilo Marulanda", 1002, 1200000, optica);
         /*
         double costoventa1 = vendedor.costoTotalVenta(cliente1);
         double costoventa2 = vendedor.costoTotalVenta(cliente2);
