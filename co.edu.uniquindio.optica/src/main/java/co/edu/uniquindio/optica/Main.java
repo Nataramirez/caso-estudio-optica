@@ -2,6 +2,8 @@ package co.edu.uniquindio.optica;
 import co.edu.uniquindio.optica.model.Cliente;
 import co.edu.uniquindio.optica.model.Optica;
 import co.edu.uniquindio.optica.model.Vendedor;
+import co.edu.uniquindio.optica.model.EntradaConsola;
+import co.edu.uniquindio.optica.enums.Crud;
 
 import java.util.List;
 
@@ -42,6 +44,44 @@ public class Main
         System.out.println("\n--------> Lista de vendedores después de eliminar y actualizar <-------\n");
         mostrarInformacionVendedores(optica);
 
+        /*
+        codigo para ejecutar la aplicación
+        int ejecutarAplicacion = 1;
+        while (ejecutarAplicacion == 1){
+            String tipoProceso = EntradaConsola.tipoProceso();
+            ejecutarAplicacion = EntradaConsola.cerrarApliacionString(tipoProceso);
+            if(tipoProceso != null){
+                String tipoCrud = EntradaConsola.tipoCrud(tipoProceso);
+                ejecutarAplicacion = EntradaConsola.cerrarApliacionString(tipoCrud);
+                if(tipoCrud != null){
+                    ejecutarAplicacion = ejecutarCrud(tipoProceso, tipoCrud);
+                }
+            }
+        }*/
+    }
+
+    /**
+     * Método para llamar el tipo de CRUD de acuerdo al proceso
+     * @param proceso
+     * @param crud
+     * @return
+     */
+    private static int ejecutarCrud(String proceso, String crud){
+        int cerrarAplicacion = 1;
+        if(crud.contains(Crud.CREATE.getNombre())){
+            cerrarAplicacion = EntradaConsola.crear(proceso);
+        }
+        if(crud.contains(Crud.READ.getNombre())){
+            cerrarAplicacion = EntradaConsola.leer(proceso);
+        }
+        if(crud.contains(Crud.DELETE.getNombre())){
+            cerrarAplicacion = EntradaConsola.eliminar(proceso);
+        }
+        if(crud.contains(Crud.UPDATE.getNombre())){
+            cerrarAplicacion = EntradaConsola.actualizar(proceso);
+        }
+
+        return cerrarAplicacion;
     }
 
     /**
