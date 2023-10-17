@@ -6,15 +6,15 @@ import co.edu.uniquindio.optica.enums.TipoFiltro;
 
 public class Cliente {
     private String nombreCompleto;
-    private long numeroContacto;
-    private int edad;
+    private Long numeroContacto;
+    private Integer edad;
     private int numeroId;
     private String correo;
 
     public Cliente() {
     }
 
-    public Cliente(String nombreCompleto, long numeroContacto, int edad, int numeroId, String correo) {
+    public Cliente(String nombreCompleto, long numeroContacto, Integer edad, int numeroId, String correo) {
         this.nombreCompleto = nombreCompleto;
         this.numeroContacto = numeroContacto;
         this.edad = edad;
@@ -30,19 +30,19 @@ public class Cliente {
         this.nombreCompleto = nombreCompleto;
     }
 
-    public long getNumeroContacto() {
+    public Long getNumeroContacto() {
         return numeroContacto;
     }
 
-    public void setNumeroContacto(long numeroContacto) {
+    public void setNumeroContacto(Long numeroContacto) {
         this.numeroContacto = numeroContacto;
     }
 
-    public int getEdad() {
+    public Integer getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
+    public void setEdad(Integer edad) {
         this.edad = edad;
     }
 
